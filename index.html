@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Generador de Presupuestos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header" id="presupuesto">
+    <h1> Servicios Jardinería M.A - Presupuesto 2025 </h1>
+
+   <div class="row">
+      <div class="L-cliente">
+        <label>Cliente</label><br>
+        <input id="nombre" type="text" placeholder="Nombre" />
+      </div>
+    </div>
+
+    <table id="tabla"> 
+      <thead>
+        <tr>
+          <th>#</th>
+          <th style="width:50px" class="tabla1">Cantidad</th>
+          <th>Producto</th>
+          <th style="width:140px">Precio unitario</th>
+          <th style="width:120px" class="right">Total ARS</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    
+    <div class="botones1" style="margin-top:6px">
+      <button onclick="addToClipboard()" class="secondary">Copiar resumen</button>
+      <div style="flex:1"></div>
+      <button onclick="imprimirPresupuesto()">Imprimir presupuesto</button>
+      <button onclick="exportPDF()">Exportar a PDF</button>
+    </div>
+
+    <div class="totales" id="resumen"></div>
+
+    <p class="small">
+      Usá las filas para seleccionar producto, indicar cantidad y precio unitario.  
+      El sistema calcula IVA discriminado y cuotas Ahora 12/18 (Ahora18 aplica 75% de interés).
+    </p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script> 
+</body>
+</html>
